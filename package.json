@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "chai-immutable": "^1.6.0",
+    "immutable": "^3.8.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-scripts": "1.0.13"
@@ -11,6 +13,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
+    "test:unit": "mocha --require ./test/unit/test_helper.js \"test/unit/**/*@(.js|.jsx)\"",
+    "test:watch": "npm run test:unit -- --watch",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
